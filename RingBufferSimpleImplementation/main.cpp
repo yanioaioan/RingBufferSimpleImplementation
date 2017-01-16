@@ -8,6 +8,9 @@ class RingBuffer
 {
     public:
 
+    /*initialize ring buffer with a prespecified size, set up variables:
+     *  m_itemsCurrentlyStored, tail and head (which starts from the end of the array to satisfy the first addition to the buffer)
+    */
     RingBuffer(int bufferSize):m_bufferSize(bufferSize),
                                 m_underlyingBuffer (new int[bufferSize]),
                                     m_itemsCurrentlyStored(0),//start as if it was full
@@ -21,7 +24,9 @@ class RingBuffer
     void push(int value)
     {
 
-
+        // if buffer full, make sure tail gets incremented to point to the next element from
+        //what it was pointing to before cause the new element added to the ring buffer will overwrite
+        //the oldest in
         if (m_itemsCurrentlyStored==m_bufferSize)
         {
             //increment head pointer
