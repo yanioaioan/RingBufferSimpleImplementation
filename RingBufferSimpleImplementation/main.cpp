@@ -50,7 +50,7 @@ class RingBuffer
 
     }
 
-    //pop
+    //pop and return the oldest item from the buffer
     int pop()
     {
         //buffer not empty
@@ -84,11 +84,9 @@ class RingBuffer
 
 };
 
-
+//http://www.blackwasp.co.uk/CircularBuffer_2.aspx
 int main(int argc, char *argv[])
 {
-
-
 
     const int bufferSize = 5;
     RingBuffer r(bufferSize);
