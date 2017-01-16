@@ -84,6 +84,7 @@ class RingBuffer
 
 };
 
+//https://accu.org/index.php/journals/389
 //http://www.blackwasp.co.uk/CircularBuffer_2.aspx
 int main(int argc, char *argv[])
 {
